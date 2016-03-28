@@ -1,8 +1,11 @@
-section {
-  height: 200px;
-  width: 200px;
+#container {
+  height: 500px;
+  width: 500px;
   text-align: center;
 }
 div {
   text-align: center;
+}
+.chair {
+  position: absolute;
 }

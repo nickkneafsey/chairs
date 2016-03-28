@@ -6,8 +6,8 @@
   </head>
   <body>
     <h1>Chairs!!</h1>
-    <section ng-controller="ChairController">
-      <div ng-repeat="chair in chairs">{{chair}}</div>
+    <section id="container" ng-controller="ChairController">
+      <div class="chair" ng-repeat="chair in chairs" style="left:{{chair.x}}px; top:{{chair.y}}px;" ng-cloak>{{chair.number}}</div>
     </section>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
     <script src="./app.js"></script>
