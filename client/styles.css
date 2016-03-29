@@ -62,9 +62,19 @@ h1 {
       -webkit-transform: rotate(0deg);
       -webkit-animation-timing-function: ease-out;
     }
-    25%  {-webkit-transform: rotate(360deg);}
-    50%  {-webkit-transform: rotate(720deg);}
-    100% {-webkit-transform: rotate(1080deg);}
+
+    25%  {
+      -webkit-transform: rotate(360deg);
+      -webkit-animation-timing-function: ease-out;
+    }
+    50%  {
+      -webkit-transform: rotate(720deg);
+      -webkit-animation-timing-function: ease-out;
+    }
+    100% {
+      -webkit-transform: rotate(1080deg);
+      -webkit-animation-timing-function: ease-out;
+    }
 }
 
 /* Standard syntax */
@@ -86,4 +96,14 @@ h1 {
       -webkit-transform: rotate(1080deg);
       -webkit-animation-timing-function: ease-out;
     }
+}
+
+@media screen and (max-width: 800px) {
+  .side: {
+    display: inline;
+    width: 100%;
+  }
+  .bottom {
+    width: 100%;
+  }
 }
