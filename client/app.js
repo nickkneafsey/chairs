@@ -1,9 +1,16 @@
-var chairApp = angular.module('chairApp', []);
+var chairApp = angular.module('chairApp', [
+  'ngMaterial'
+]);
 
 chairApp.controller('ChairController', ['$scope', '$timeout', function($scope, $timeout) {
   $scope.chairs=[];
+  $scope.disabled = true;
+  $scope.lastone = "";
 
-  function num(numChair) {
+  $scope.num = function(numChair) {
+    $scope.lastone = ""
+    $scope.disabled = true;
+    $scope.chairs=[];
     var radius = 150;
     var width = 400;
     var height = 400;
@@ -32,11 +39,14 @@ chairApp.controller('ChairController', ['$scope', '$timeout', function($scope, $
         $timeout(function() {
           remove(chairs, currentIndex, skip);
         }, 200);
+      } else {
+        $scope.disabled = false;
+        $scope.lastone="winner"
       }
     }
 
     remove($scope.chairs, currentIndex, skip);
   }
 
-  num(100)
+  $scope.num(100)
 }]);

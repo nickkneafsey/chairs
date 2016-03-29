@@ -13,3 +13,54 @@ div {
 span {
   vertical-align: middle;
 }
+.nav {
+  background-color: black;
+}
+
+.button {
+  float:left;
+  float: bottom;
+}
+h1 {
+  color: white;
+  margin: .2em;
+  font-family: 'Texta', 'AvenirNext-Regular', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif';
+  text-transform: uppercase;
+}
+
+.winner {
+  -webkit-animation-name: chosen;
+  -webkit-animation-duration: 4s;
+  animation-name: chosen;
+  animation-duration: 4s;
+}
+
+@-webkit-keyframes chosen {
+    0%   {
+      -webkit-transform: rotate(0deg);
+      -webkit-animation-timing-function: ease-out;
+    }
+    25%  {-webkit-transform: rotate(360deg);}
+    50%  {-webkit-transform: rotate(720deg);}
+    100% {-webkit-transform: rotate(1080deg);}
+}
+
+/* Standard syntax */
+@keyframes chosen {
+    0%   {
+      -webkit-transform: rotate(0deg);
+      -webkit-animation-timing-function: ease-out;
+    }
+    25%  {
+      -webkit-transform: rotate(360deg);
+      -webkit-animation-timing-function: ease-out;
+    }
+    50%  {
+      -webkit-transform: rotate(720deg);
+      -webkit-animation-timing-function: ease-out;
+    }
+    100% {
+      -webkit-transform: rotate(1080deg);
+      -webkit-animation-timing-function: ease-out;
+    }
+}

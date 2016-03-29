@@ -2,14 +2,22 @@
 <html ng-app="chairApp">
   <head>
     <title>Chairs</title>
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
     <link rel="stylesheet" href="./styles.css">
   </head>
   <body>
-    <h1>Chairs!!</h1>
+    <div layout="row" flex class="fill-height layout-row flex nav"><h1>Chairs!!</h1></div>
     <section id="container" ng-controller="ChairController">
-      <span class="chair" ng-repeat="chair in chairs" style="left:{{chair.x}}px; top:{{chair.y}}px;" ng-cloak>{{chair.number}}</span>
+      <span class="chair" ng-class="lastone" ng-repeat="chair in chairs" style="left:{{chair.x}}px; top:{{chair.y}}px;" ng-cloak>{{chair.number}}</span>
+      <md-button class="button" ng-click="num(100)" ng-disabled="disabled"> REPLAY</md-button>
     </section>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
+  
     <script src="./app.js"></script>
   </body>
 </html>
