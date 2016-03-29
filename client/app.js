@@ -38,7 +38,7 @@ chairApp.controller('ChairController', ['$scope', '$timeout', function($scope, $
         currentIndex %= $scope.chairs.length;
         $timeout(function() {
           remove(chairs, currentIndex, skip);
-        }, 200);
+        }, 50);
       } else {
         $scope.disabled = false;
         $scope.lastone="winner"

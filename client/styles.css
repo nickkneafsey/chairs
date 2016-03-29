@@ -1,12 +1,12 @@
 #container {
-  height: 500px;
-  width: 500px;
+  height: 400px;
+  width: 400px;
   text-align: center;
   line-height: 200px;
+  display: inline-block;
 }
 div {
-  text-align: center;
-}
+  }
 .chair {
   position: absolute;
 }
@@ -17,9 +17,31 @@ span {
   background-color: black;
 }
 
+.side {
+  width: 400px;
+  display: inline-block;
+  box-sizing:border-box;
+  background-color: black;
+  float: right;
+  height: 400px;
+}
+
+.bottom {
+  background-color: #F1F1F1;
+  display: inline-block;
+  float: right;
+}
+
+.directions {
+  color: white;
+}
+
 .button {
   float:left;
   float: bottom;
+}
+p {
+  margin: 2em;
 }
 h1 {
   color: white;
@@ -51,6 +73,7 @@ h1 {
       -webkit-transform: rotate(0deg);
       -webkit-animation-timing-function: ease-out;
     }
+
     25%  {
       -webkit-transform: rotate(360deg);
       -webkit-animation-timing-function: ease-out;

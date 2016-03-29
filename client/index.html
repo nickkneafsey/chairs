@@ -6,12 +6,24 @@
     <link rel="stylesheet" href="./styles.css">
   </head>
   <body>
+    <div>
     <div layout="row" flex class="fill-height layout-row flex nav"><h1>Chairs!!</h1></div>
     <section id="container" ng-controller="ChairController">
       <span class="chair" ng-class="lastone" ng-repeat="chair in chairs" style="left:{{chair.x}}px; top:{{chair.y}}px;" ng-cloak>{{chair.number}}</span>
       <md-button class="button" ng-click="num(100)" ng-disabled="disabled"> REPLAY</md-button>
     </section>
+    <aside class="side">
+      <p class="directions">Take a second to imagine that you are in a room with 100 chairs arranged in a circle. These chairs are numbered sequentially from One to One Hundred. At some point in time, the person in chair #1 will be told to leave the room. The person in chair #2 will be skipped, and the person in chair #3 will be told to leave. Next to go is person in chair #6. In other words, 1 person will be skipped initially, and then 2, 3, 4.. and so on. This pattern of skipping will keep going around the circle until there is only one person remaining- The survivor! Note that each chair is removed when the person leaves the room.</p>
+    </aside>
+    
+    <aside class="bottom">
+      <p>From Wikipedia</p>
+      <p>A chair is a piece of furniture with a raised surface, commonly used to seat a single person. Chairs are supported most often by four legs and have a back;[1][2] however, a chair can have three legs or could have a different shape.[3] Chairs are made of a wide variety of materials, ranging from wood to metal to synthetic material (e.g., plastic), and they may be padded or upholstered, either just on the seat (as with some dining room chairs) or on the entire chair (e.g., with a La-Z-Boy chair). Chairs are used in a number of rooms in homes (e.g., in living rooms, dining rooms and dens), in schools and offices (with desks) and in various other workplaces.</p>
 
+      <p>A chair without a back or arm rests is a stool,[4] or when raised up, a bar stool.[5] A chair with arms is an armchair[6] and with upholstery, reclining action and a fold-out footrest, a recliner.[7] A permanently fixed chair in a train or theater is a seat[8] or, in an airplane, airline seat;[citation needed] when riding, it is a saddle[citation needed] and bicycle saddle,[citation needed] and for an automobile, a car seat[citation needed] or infant car seat.[citation needed] With wheels it is a wheelchair[9] and when hung from above, a swing.[citation needed]</p>
+
+    </aside>
+    </div>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
